@@ -1,0 +1,21 @@
+[x]-add combat
+    ↳[x]-add loc listener
+    ↳[x]-add mob listener
+    ↳[x]-tweak embed to resource/mob
+
+[x]-set multiple default channels
+[x]-do multiple boosts
+[x]-add emojis to embed
+[x]-add help command
+[x]-add analytics
+[x]-make channels dict local and update local with cloud (need to check it more)
+[x]-add specific help subcommand 
+[x]-redo guides data
+[x]-dynamic guides boost update
+[x]-add analytics for guides
+[x]-make the rest of the commands channel-specified
+[x]-fix added lvls' xps
+[n]-add magic sets to resources (y/n) ?
+[x]-split guides to multiple columns
+[d]-move guides dynamics to wait_for
+[o]-add guides to help cmd
