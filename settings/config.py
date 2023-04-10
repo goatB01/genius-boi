@@ -1,5 +1,13 @@
 import os
 
+"""the bot token saved in env vars as 'TOKEN' """
+TOKEN = os.getenv("TOKEN")
+"""the database connection string saved in env vars as 'DB_URL0' """
+DB_URL0 = os.getenv("DB_URL0")
+"""the database connection string saved in env vars as 'DB_URL1' """
+DB_URL1 = os.getenv("CALC_DB_URL1")
+
+
 COMMANDS={
     "calc":{
         "name":f"/calc [current_Lvl] [target_Lvl] [current_%]* [target_%]*",
@@ -30,20 +38,26 @@ COMMANDS={
            },
     "set_channel":{
         "name":"/set_channel [#channel]",
-        "description":"set a channel as default channel(s) for the bot.\nif no channel is specified, the bot will run in any channel.",
+        "description":"set a channel as default channel(s) for the bot.\nif no channel is specified, the bot will run in any channel.\nif the channel is already a default, it will be removed.",
         "args":{
             "#channel":{
                 "description":"the channel to be set as default channel for the bot",
                 "required":True
                    }
                }
+           },
+    "guides":{
+        "name":"/guides [skill]",
+        "description":"create a guide of the chosen skill with with dynamic boost menu.",
+        "args":{
+            "skill":{
+                "description":"the skill to make the guide on",
+                "required":True
+                   }
+               }
            }
 }
-"""the bot token saved in env vars as 'TOKEN' """
-TOKEN = os.getenv("TOKEN")
-"""the database connection string saved in env vars as 'DB_URL' """
-DB_URL = os.getenv("DB_URL")
-CALC_DB_URL = os.getenv("CALC_DB_URL")
+
 
 
 job_list=[

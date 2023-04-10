@@ -18,7 +18,7 @@ class ATM(interactions.Extension):
 
     def __init__(self,client : Client) -> None:
         self.bot = client
-        self.mclient = pymongo.MongoClient(DB_URL)
+        self.mclient = pymongo.MongoClient(DB_URL0)
         self.mdb = self.mclient["Company"]
 
 

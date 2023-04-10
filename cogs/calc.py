@@ -93,7 +93,7 @@ class Calculator(interactions.Extension):
                         ],
                         placeholder="Select Skill !"
                             )
-        self.DBclient = MongoClient(CALC_DB_URL)
+        self.DBclient = MongoClient(DB_URL1)
         self.DB = self.DBclient["Miscs"]
         self.default_channels = default_channel
         return None

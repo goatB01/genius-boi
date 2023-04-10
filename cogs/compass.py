@@ -21,7 +21,7 @@ from data.xp_tabs import *
 class Guide(interactions.Extension):
     def __init__(self,client: Client,default_channels) -> None:
         self.bot = client
-        self.DBclient = MongoClient(CALC_DB_URL)
+        self.DBclient = MongoClient(DB_URL1)
         self.DB = self.DBclient["Miscs"]
         self.channel_collection = self.DB["config"]
         self.default_channels = default_channels

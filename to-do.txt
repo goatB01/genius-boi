@@ -18,4 +18,7 @@
 [n]-add magic sets to resources (y/n) ?
 [x]-split guides to multiple columns
 [d]-move guides dynamics to wait_for
-[o]-add guides to help cmd
+[x]-add guides to help cmd
+[o]-added needed resources to skills's calc
+[o]-add rings/hammers uses
+[o]-specify spades usage in embed footer
