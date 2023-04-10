@@ -1,6 +1,4 @@
-TOKEN = "ODgxMTc4MzEzMTYxMzEwMjI4.GrkZA6.GAQbruKBybM0xladnR6T-Q71qI_8Upzja-stxc"
-CALC_DB_URL = "mongodb+srv://smartboi:pega11963112@smartboi.g8shibc.mongodb.net/?retryWrites=true&w=majority"
-
+import os
 
 COMMANDS={
     "calc":{
@@ -41,3 +39,36 @@ COMMANDS={
                }
            }
 }
+"""the bot token saved in env vars as 'TOKEN' """
+TOKEN = os.getenv("TOKEN")
+"""the database connection string saved in env vars as 'DB_URL' """
+DB_URL = os.getenv("DB_URL")
+CALC_DB_URL = os.getenv("CALC_DB_URL")
+
+
+job_list=[
+    "woodcutter",
+    "crafter",
+    "miner",
+    "smither",
+    "fisher",
+    "tailor"
+]
+job_rsc={
+    "woodcutter": "logs",
+    "crafter": "relics",
+    "miner": "ores",
+    "smither": "bars",
+    "fisher": "fish",
+    "tailor": "magic"
+}
+categories = [ "logs",
+                "ores",
+                "relics",
+                "bars",
+                "fish",
+                "magic"
+            ] 
+
+
+            

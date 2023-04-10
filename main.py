@@ -21,9 +21,11 @@ async def on_ready():
 
 
 bot.load("cogs.utils",default_channels=default_channels)
-
 bot.load("cogs.calc",default_channels=default_channels)
 bot.load("cogs.compass",default_channels=default_channels)
+
+bot.load("cogs.updater")
+bot.load("cogs.payment")
 
 
 
