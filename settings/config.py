@@ -11,7 +11,7 @@ DB_URL1 = os.getenv("CALC_DB_URL1")
 COMMANDS={
     "calc":{
         "name":f"/calc [current_Lvl] [target_Lvl] [current_%]* [target_%]*",
-        "description":"calculate resourses needed from your current level to a target level.",
+        "description":"Calculate the resourses needed to get from your current level to a target level.",
         "args":{
             "current Lvl":{
                 "description":"your current level",
@@ -33,29 +33,34 @@ COMMANDS={
            },
     "ping":{
         "name":"/ping",
-        "description":"show the bot ping.",
+        "description":"Show the bot ping.",
         "args":None
            },
     "set_channel":{
         "name":"/set_channel [#channel]",
-        "description":"set a channel as default channel(s) for the bot.\nif no channel is specified, the bot will run in any channel.\nif the channel is already a default, it will be removed.",
+        "description":"Set a channel as default channel(s) for the bot.\nIf no channel is specified, the bot will run in any channel.\nIf the channel is already a default, it will be removed.",
         "args":{
             "#channel":{
-                "description":"the channel to be set as default channel for the bot",
+                "description":"The channel to be set as default channel for the bot",
                 "required":True
                    }
                }
            },
     "guides":{
         "name":"/guides [skill]",
-        "description":"create a guide of the chosen skill with with dynamic boost menu.",
+        "description":"Create a guide of the chosen skill with with dynamic boost menu.",
         "args":{
             "skill":{
-                "description":"the skill to make the guide on",
+                "description":"The skill to make the guide on",
                 "required":True
                    }
                }
-           }
+           },
+    "support_server":{
+        "name":"/support_server",
+        "description":"Get an invite link to the support server,\nWhere you can ask for help, give feedbacks or report bugs.",
+        "args":None
+    }
 }
 
 

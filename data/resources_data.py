@@ -164,7 +164,7 @@ resources_dict={
             "emoji_name": "palm_wood_ca1",
             "emoji_id": 922856261052149761
         },
-        "Pearwood": {
+        "Pear Wood": {
             "level": 90,
             "xp": 9000,
             "emoji_name": "pearwood_ch",
@@ -181,281 +181,386 @@ resources_dict={
         "Anchovies": {
             "level": 1,
             "xp": 10,
-            "bait": {
-                "Earthworm": 1
-            },
             "emoji_name": "anchovies_ca2",
-            "emoji_id": 922873492137992222
+            "emoji_id": 922873492137992222,
+            "submaterials": {
+                "Earthworm": {
+                    "quantity": 1,
+                    "emoji_str": "<:earthworm_ca2:922887338357567499>"
+                }
+            }
         },
         "Goldfish": {
             "level": 5,
             "xp": 20,
-            "bait": {
-                "Earthworm": 1
-            },
             "emoji_name": "goldfish_ca2",
-            "emoji_id": 922873492536442940
+            "emoji_id": 922873492536442940,
+            "submaterials": {
+                "Earthworm": {
+                    "quantity": 1,
+                    "emoji_str": "<:earthworm_ca2:922887338357567499>"
+                }
+            }
         },
         "Mackerel": {
             "level": 10,
             "xp": 50,
-            "bait": {
-                "Iceworm": 1
-            },
             "emoji_name": "mackerel_ca2",
-            "emoji_id": 922873492821672027
+            "emoji_id": 922873492821672027,
+            "submaterials": {
+                "Iceworm": {
+                    "quantity": 1,
+                    "emoji_str": "<:iceworm_ca2:922887338655354962>"
+                }
+            }
         },
         "Squid": {
             "level": 20,
             "xp": 115,
-            "bait": {
-                "Iceworm": 1
-            },
             "emoji_name": "squid_ca2",
-            "emoji_id": 922873493312376862
+            "emoji_id": 922873493312376862,
+            "submaterials": {
+                "Iceworm": {
+                    "quantity": 1,
+                    "emoji_str": "<:iceworm_ca2:922887338655354962>"
+                }
+            }
         },
         "Sardine": {
             "level": 30,
             "xp": 375,
-            "bait": {
-                "Corpseworm": 1
-            },
             "emoji_name": "sardine_ca2",
-            "emoji_id": 922873493060743189
+            "emoji_id": 922873493060743189,
+            "submaterials": {
+                "Corpseworm": {
+                    "quantity": 1,
+                    "emoji_str": "<:corpseworm:922887338269499414>"
+                }
+            }
         },
         "Eel": {
             "level": 40,
             "xp": 500,
-            "bait": {
-                "Toxic Worm": 1
-            },
             "emoji_name": "eel_ca2",
-            "emoji_id": 922873492272189451
+            "emoji_id": 922873492272189451,
+            "submaterials": {
+                "Toxic Worm": {
+                    "quantity": 1,
+                    "emoji_str": "<:toxic_worm_ca2:922887339037044756>"
+                }
+            }
         },
         "Anglerfish": {
             "level": 45,
             "xp": 625,
-            "bait": {
-                "Sandworm": 1
-            },
             "emoji_name": "anglerfish_ca2",
-            "emoji_id": 922873492293177405
+            "emoji_id": 922873492293177405,
+            "submaterials": {
+                "Sandworm": {
+                    "quantity": 1,
+                    "emoji_str": "<:sandworm_ca2:922887338848296970>"
+                }
+            }
         },
         "Trout": {
             "level": 50,
             "xp": 750,
-            "bait": {
-                "Beetle": 1
-            },
             "emoji_name": "trout_ca2",
-            "emoji_id": 922873493345959996
+            "emoji_id": 922873493345959996,
+            "submaterials": {
+                "Beetle": {
+                    "quantity": 1,
+                    "emoji_str": "<:beetle_ca2:922887338412097656>"
+                }
+            }
         },
         "Trout+Jellyfish": {
             "level": 55,
             "xp": 825,
-            "bait": {
-                "Beetle": 1
-            },
             "emoji_name": "trout_jellyfish_ca2",
-            "emoji_id": 922876044111937548
+            "emoji_id": 922876044111937548,
+            "submaterials": {
+                "Beetle": {
+                    "quantity": 1,
+                    "emoji_str": "<:beetle_ca2:922887338412097656>"
+                }
+            }
         },
         "Bass": {
             "level": 60,
             "xp": 1350,
-            "bait": {
-                "Grasshopper": 1
-            },
             "emoji_name": "bass_ca2",
-            "emoji_id": 922873492058284094
+            "emoji_id": 922873492058284094,
+            "submaterials": {
+                "Grasshopper": {
+                    "quantity": 1,
+                    "emoji_str": "<:grasshopper_ca2:922887338810548265>"
+                }
+            }
         },
         "Bass+Herringbone": {
             "level": 65,
             "xp": 1525,
-            "bait": {
-                "Grasshopper": 1
-            },
             "emoji_name": "bass_bones_ca2",
-            "emoji_id": 922876044036407326
+            "emoji_id": 922876044036407326,
+            "submaterials": {
+                "Grasshopper": {
+                    "quantity": 1,
+                    "emoji_str": "<:grasshopper_ca2:922887338810548265>"
+                }
+            }
         },
         "Tuna": {
             "level": 70,
             "xp": 2000,
-            "bait": {
-                "Wasp": 1
-            },
             "emoji_name": "tuna_ca2",
-            "emoji_id": 922873493475950672
+            "emoji_id": 922873493475950672,
+            "submaterials": {
+                "Wasp": {
+                    "quantity": 1,
+                    "emoji_str": "<:wasp_ca2:922887339070619708>"
+                }
+            }
         },
         "Lobster": {
             "level": 75,
             "xp": 3500,
-            "bait": {
-                "Scallop": 1
-            },
             "emoji_name": "lobster_ca2",
-            "emoji_id": 922873492813271051
+            "emoji_id": 922873492813271051,
+            "submaterials": {
+                "Scallop": {
+                    "quantity": 1,
+                    "emoji_str": "<:scallop_ca2:922887338756030515>"
+                }
+            }
         },
         "Lobster+SeaTurtle": {
             "level": 80,
             "xp": 5000,
-            "bait": {
-                "Scallop": 1
-            },
             "emoji_name": "lobster_seaturtle_ca2",
-            "emoji_id": 922876043780575233
+            "emoji_id": 922876043780575233,
+            "submaterials": {
+                "Scallop": {
+                    "quantity": 1,
+                    "emoji_str": "<:scallop_ca2:922887338756030515>"
+                }
+            }
         },
         "Manta Ray": {
             "level": 85,
             "xp": 9500,
-            "bait": {
-                "Crab": 1
-            },
             "emoji_name": "manta_ray_ca2",
-            "emoji_id": 922873492691644447
+            "emoji_id": 922873492691644447,
+            "submaterials": {
+                "Crab": {
+                    "quantity": 1,
+                    "emoji_str": "<:crab_ca2:922887338567286784>"
+                }
+            }
         },
         "Shark": {
             "level": 90,
             "xp": 14500,
-            "bait": {
-                "Bass": 1
-            },
             "emoji_name": "shark_ca2",
-            "emoji_id": 922873493115248721
+            "emoji_id": 922873493115248721,
+            "submaterials": {
+                "Bass": {
+                    "quantity": 1,
+                    "emoji_str": "<:bass_ca2:922873492058284094>"
+                }
+            }
         },
         "Shark+Orca": {
             "level": 95,
             "xp": 22000,
-            "bait": {
-                "Bass": 1
-            },
             "emoji_name": "shark_orca_ca2",
-            "emoji_id": 922876044158070825
+            "emoji_id": 922876044158070825,
+            "submaterials": {
+                "Bass": {
+                    "quantity": 1,
+                    "emoji_str": "<:bass_ca2:922873492058284094>"
+                }
+            }
         },
         "Shark+Orca+GiantSquid": {
             "level": 100,
             "xp": 33000,
-            "bait": {
-                "Bass": 1
-            },
             "emoji_name": "shark_orca_giantsquid_ca2",
-            "emoji_id": 922876044342624376
+            "emoji_id": 922876044342624376,
+            "submaterials": {
+                "Bass": {
+                    "quantity": 1,
+                    "emoji_str": "<:bass_ca2:922873492058284094>"
+                }
+            }
         }
     },
     "smithing": {
         "Bronze Bar": {
             "level": 1,
             "xp": 5,
-            "xp-smelt": "3",
+            "xp-smelt": 3,
             "emoji_name": "bronze_bar_ca1",
             "emoji_id": 922855760193531904,
             "submaterials": {
-                "Copper": "2",
-                "Tin Ore": "2"
+                "Copper Ore": {
+                    "quantity": 2,
+                    "emoji_str": "<:copper_ore_ca1:922855022180577290>"
+                },
+                "Tin Ore": {
+                    "quantity": 2,
+                    "emoji_str": "<:tin_ore_ca1:922854986357043280>"
+                }
             }
         },
         "Iron Bar": {
             "level": 10,
-            "xp": 14,
-            "xp-smelt": "8",
+            "xp": 16,
+            "xp-smelt": 8,
             "emoji_name": "iron_bar_ca1",
             "emoji_id": 922855781030842409,
             "submaterials": {
-                "Iron Ore": "3"
+                "Iron Ore": {
+                    "quantity": 3,
+                    "emoji_str": "<:iron_ore_ca1:922855050156585020>"
+                }
             }
         },
         "Steel Bar": {
             "level": 20,
             "xp": 20,
-            "xp-smelt": "14",
+            "xp-smelt": 14,
             "emoji_name": "steel_bar_ca1",
             "emoji_id": 922855918633377802,
             "submaterials": {
-                "Iron Ore": "2",
-                "Coal": "1"
+                "Iron Ore": {
+                    "quantity": 2,
+                    "emoji_str": "<:iron_ore_ca1:922855050156585020>"
+                },
+                "Coal": {
+                    "quantity": 1,
+                    "emoji_str": "<:coal_ca1:922855065990099004>"
+                }
             }
         },
         "Crimsteel Bar": {
             "level": 30,
-            "xp": 217,
-            "xp-smelt": "25",
+            "xp": 216,
+            "xp-smelt": 25,
             "emoji_name": "crimsteel_bar_ca1",
             "emoji_id": 922855814669156442,
             "submaterials": {
-                "Crimsteel Ore": "2",
-                "Coal": "2"
+                "Crimsteel Ore": {
+                    "quantity": 2,
+                    "emoji_str": "<:crimsteel_ore_ca1:922855136513126460>"
+                },
+                "Coal": {
+                    "quantity": 2,
+                    "emoji_str": "<:coal_ca1:922855065990099004>"
+                }
             }
         },
         "Silver Bar": {
             "level": 35,
             "xp": 1020,
-            "xp-smelt": "50",
+            "xp-smelt": 50,
             "emoji_name": "silver_bar_ca1",
             "emoji_id": 922855844989784074,
             "submaterials": {
-                "Silver Ore": "4"
+                "Silver Ore": {
+                    "quantity": 4,
+                    "emoji_str": "<:silver_ore_ca1:922855652198592586>"
+                }
             }
         },
         "Gold Bar": {
             "level": 40,
             "xp": 20000,
-            "xp-smelt": "60",
+            "xp-smelt": 60,
             "emoji_name": "gold_bar_ca1",
             "emoji_id": 922855856901586994,
             "submaterials": {
-                "Gold Ore": "320"
+                "Gold Ore": {
+                    "quantity": 320,
+                    "emoji_str": "<:gold_ore_ca1:922855152073981952>"
+                }
             }
         },
         "Mythan Bar": {
             "level": 50,
             "xp": 9000,
-            "xp-smelt": "100",
+            "xp-smelt": 100,
             "emoji_name": "mythan_bar_ca1",
             "emoji_id": 922855882117775360,
             "submaterials": {
-                "Mythan Ore": "10",
-                "Coal": "5"
+                "Mythan Ore": {
+                    "quantity": 10,
+                    "emoji_str": "<:mythan_ore_ca1:922855187343884341>"
+                },
+                "Coal": {
+                    "quantity": 5,
+                    "emoji_str": "<:coal_ca1:922855065990099004>"
+                }
             }
         },
         "Cobalt Bar": {
             "level": 60,
             "xp": 15000,
-            "xp-smelt": "200",
+            "xp-smelt": 200,
             "emoji_name": "cobalt_bar_ca1",
             "emoji_id": 922855936161349653,
             "submaterials": {
-                "Cobalt Ore": "8",
-                "Coal": "5"
+                "Cobalt Ore": {
+                    "quantity": 8,
+                    "emoji_str": "<:cobalt_ore_ca1:922855201956823080>"
+                },
+                "Coal": {
+                    "quantity": 5,
+                    "emoji_str": "<:coal_ca1:922855065990099004>"
+                }
             }
         },
         "Varaxite Bar": {
             "level": 70,
             "xp": 20000,
-            "xp-smelt": "350",
+            "xp-smelt": 350,
             "emoji_name": "varaxite_bar_ca1",
             "emoji_id": 922855948719108126,
             "submaterials": {
-                "Varaxium": "6",
-                "Cobalt Ore": "3"
+                "Varaxium": {
+                    "quantity": 6,
+                    "emoji_str": "<:varaxium_ca1:922855217937133568>"
+                },
+                "Cobalt Ore": {
+                    "quantity": 3,
+                    "emoji_str": "<:cobalt_ore_ca1:922855201956823080>"
+                }
             }
         },
         "Magic Bar": {
             "level": 82,
             "xp": 25000,
-            "xp-smelt": "400",
+            "xp-smelt": 400,
             "emoji_name": "magic_bar_ca3",
             "emoji_id": 951240793153216563,
             "submaterials": {
-                "Magic Ore": "9"
+                "Magic Ore": {
+                    "quantity": 9,
+                    "emoji_str": "<:magic_ore_ca3:951482813759242290>"
+                }
             }
         },
         "Naturite": {
             "level": 85,
             "xp": 5000,
-            "xp-smelt": "5000",
+            "xp-smelt": 5000,
             "emoji_name": "naturite_ch",
             "emoji_id": 1080889399161663523,
             "submaterials": {
-                "Naturite Ore": "1"
+                "Naturite Ore": {
+                    "quantity": 1,
+                    "emoji_str": "<:naturite_ore_ch:1080889399161663523>"
+                }
             }
         }
     },
@@ -466,8 +571,14 @@ resources_dict={
             "emoji_name": "cooked_anchovies_ca2",
             "emoji_id": 922873530536824843,
             "submaterials": {
-                "Anchovies": "1",
-                "Salt": "1"
+                "Anchovies": {
+                    "quantity": 1,
+                    "emoji_str": "<:anchovies_ca2:922873492137992222>"
+                },
+                "Salt": {
+                    "quantity": 1,
+                    "emoji_str": "<:salt_ca1:922855080099729429>"
+                }
             }
         },
         "Cooked Mackerel": {
@@ -476,8 +587,14 @@ resources_dict={
             "emoji_name": "cooked_mackerel_ca2",
             "emoji_id": 922873531073716235,
             "submaterials": {
-                "Mackerel": "1",
-                "Salt": "1"
+                "Mackerel": {
+                    "quantity": 1,
+                    "emoji_str": "<:mackerel_ca2:922873492821672027>"
+                },
+                "Salt": {
+                    "quantity": 1,
+                    "emoji_str": "<:salt_ca1:922855080099729429>"
+                }
             }
         },
         "Cooked Squid": {
@@ -486,8 +603,14 @@ resources_dict={
             "emoji_name": "cooked_squid_ca2",
             "emoji_id": 922873531165982801,
             "submaterials": {
-                "Squid": "1",
-                "Salt": "1"
+                "Squid": {
+                    "quantity": 1,
+                    "emoji_str": "<:squid_ca2:922873493312376862>"
+                },
+                "Salt": {
+                    "quantity": 1,
+                    "emoji_str": "<:salt_ca1:922855080099729429>"
+                }
             }
         },
         "Cooked Sardine": {
@@ -496,8 +619,14 @@ resources_dict={
             "emoji_name": "cooked_sardine_ca2",
             "emoji_id": 922873531337957427,
             "submaterials": {
-                "Sardine": "1",
-                "Salt": "1"
+                "Sardine": {
+                    "quantity": 1,
+                    "emoji_str": "<:sardine_ca2:922873493060743189>"
+                },
+                "Salt": {
+                    "quantity": 1,
+                    "emoji_str": "<:salt_ca1:922855080099729429>"
+                }
             }
         },
         "Cooked Eel": {
@@ -506,8 +635,14 @@ resources_dict={
             "emoji_name": "cooked_eel_ca2",
             "emoji_id": 922873530943668235,
             "submaterials": {
-                "Eel": "1",
-                "Salt": "1"
+                "Eel": {
+                    "quantity": 1,
+                    "emoji_str": "<:eel_ca2:922873492272189451>"
+                },
+                "Salt": {
+                    "quantity": 1,
+                    "emoji_str": "<:salt_ca1:922855080099729429>"
+                }
             }
         },
         "Cooked Anglerfish": {
@@ -516,8 +651,14 @@ resources_dict={
             "emoji_name": "cooked_anglerfish_ca2",
             "emoji_id": 922873530897559602,
             "submaterials": {
-                "Anglerfish": "1",
-                "Salt": "1"
+                "Anglerfish": {
+                    "quantity": 1,
+                    "emoji_str": "<:anglerfish_ca2:922873492293177405>"
+                },
+                "Salt": {
+                    "quantity": 1,
+                    "emoji_str": "<:salt_ca1:922855080099729429>"
+                }
             }
         },
         "Cooked Trout": {
@@ -526,8 +667,14 @@ resources_dict={
             "emoji_name": "cooked_trout_ca2",
             "emoji_id": 922873531698647101,
             "submaterials": {
-                "Trout": "1",
-                "Salt": "1"
+                "Trout": {
+                    "quantity": 1,
+                    "emoji_str": "<:trout_ca2:922873493345959996>"
+                },
+                "Salt": {
+                    "quantity": 1,
+                    "emoji_str": "<:salt_ca1:922855080099729429>"
+                }
             }
         },
         "Cooked Bass": {
@@ -536,8 +683,14 @@ resources_dict={
             "emoji_name": "cooked_bass_ca2",
             "emoji_id": 922873530725568592,
             "submaterials": {
-                "Bass": "1",
-                "Pink Salt": "1"
+                "Bass": {
+                    "quantity": 1,
+                    "emoji_str": "<:bass_ca2:922873492058284094>"
+                },
+                "Pink Salt": {
+                    "quantity": 1,
+                    "emoji_str": "<:pink_salt_ca1:922855174563831829>"
+                }
             }
         },
         "Cooked Tuna": {
@@ -546,8 +699,14 @@ resources_dict={
             "emoji_name": "cooked_tuna_ca2",
             "emoji_id": 922873531803533382,
             "submaterials": {
-                "Tuna": "1",
-                "Pink Salt": "1"
+                "Tuna": {
+                    "quantity": 1,
+                    "emoji_str": "<:tuna_ca2:922873493475950672>"
+                },
+                "Pink Salt": {
+                    "quantity": 1,
+                    "emoji_str": "<:pink_salt_ca1:922855174563831829>"
+                }
             }
         },
         "Cooked Lobster": {
@@ -556,8 +715,14 @@ resources_dict={
             "emoji_name": "cooked_lobster_ca2",
             "emoji_id": 922873530973036574,
             "submaterials": {
-                "Lobster": "1",
-                "Pink Salt": "1"
+                "Lobster": {
+                    "quantity": 1,
+                    "emoji_str": "<:lobster_ca2:922873492813271051>"
+                },
+                "Pink Salt": {
+                    "quantity": 1,
+                    "emoji_str": "<:pink_salt_ca1:922855174563831829>"
+                }
             }
         },
         "Cooked Sea Turtle": {
@@ -566,8 +731,14 @@ resources_dict={
             "emoji_name": "cooked_sea_turtle_ca2",
             "emoji_id": 922873531547664384,
             "submaterials": {
-                "Sea Turtle": "1",
-                "Pink Salt": "1"
+                "Sea Turtle": {
+                    "quantity": 1,
+                    "emoji_str": "<:sea_turtle_ca2:922873493337571398>"
+                },
+                "Pink Salt": {
+                    "quantity": 1,
+                    "emoji_str": "<:pink_salt_ca1:922855174563831829>"
+                }
             }
         },
         "Cooked Manta Ray": {
@@ -576,8 +747,14 @@ resources_dict={
             "emoji_name": "cooked_manta_ray_ca2",
             "emoji_id": 922873531195355176,
             "submaterials": {
-                "Manta Ray": "1",
-                "Pink Salt": "1"
+                "Manta Ray": {
+                    "quantity": 1,
+                    "emoji_str": "<:manta_ray_ca2:922873492691644447>"
+                },
+                "Pink Salt": {
+                    "quantity": 1,
+                    "emoji_str": "<:pink_salt_ca1:922855174563831829>"
+                }
             }
         },
         "Cooked Shark": {
@@ -586,8 +763,14 @@ resources_dict={
             "emoji_name": "cooked_shark_ca2",
             "emoji_id": 922873531501510686,
             "submaterials": {
-                "Shark": "1",
-                "Black Salt": "1"
+                "Shark": {
+                    "quantity": 1,
+                    "emoji_str": "<:shark_ca2:922873493115248721>"
+                },
+                "Black Salt": {
+                    "quantity": 1,
+                    "emoji_str": "<:black_salt_ca1:922855247943204865>"
+                }
             }
         },
         "Cooked Orca": {
@@ -596,8 +779,14 @@ resources_dict={
             "emoji_name": "cooked_orca_ca2",
             "emoji_id": 922873530994003989,
             "submaterials": {
-                "Orca": "1",
-                "Black Salt": "1"
+                "Orca": {
+                    "quantity": 1,
+                    "emoji_str": "<:orca_ca2:922873493001998366>"
+                },
+                "Black Salt": {
+                    "quantity": 1,
+                    "emoji_str": "<:black_salt_ca1:922855247943204865>"
+                }
             }
         },
         "Cooked Giant Squid": {
@@ -606,8 +795,14 @@ resources_dict={
             "emoji_name": "cooked_giant_squid_ca2",
             "emoji_id": 922873530943680532,
             "submaterials": {
-                "Giant Squid": "1",
-                "Black Salt": "1"
+                "Giant Squid": {
+                    "quantity": 1,
+                    "emoji_str": "<:giant_squid_ca2:922873492502876191>"
+                },
+                "Black Salt": {
+                    "quantity": 1,
+                    "emoji_str": "<:black_salt_ca1:922855247943204865>"
+                }
             }
         }
     },
@@ -618,7 +813,10 @@ resources_dict={
             "emoji_name": "accuracy_relic_ca1",
             "emoji_id": 922857047014395904,
             "submaterials": {
-                "Pine Logs": "1"
+                "Pine Log": {
+                    "quantity": 1,
+                    "emoji_str": "<:pine_log_ca1:922856057909420072>"
+                }
             }
         },
         "Guarding Relic": {
@@ -627,7 +825,10 @@ resources_dict={
             "emoji_name": "guarding_relic_ca1",
             "emoji_id": 922857046926327899,
             "submaterials": {
-                "Dead Logs": "1"
+                "Dead Log": {
+                    "quantity": 1,
+                    "emoji_str": "<:dead_log_ca1:922856079233269780>"
+                }
             }
         },
         "Healing Relic": {
@@ -636,7 +837,10 @@ resources_dict={
             "emoji_name": "healing_relic_ca1",
             "emoji_id": 922871203033649222,
             "submaterials": {
-                "Birch Logs": "1"
+                "Birch Log": {
+                    "quantity": 1,
+                    "emoji_str": "<:birch_log_ca1:922856103849623702>"
+                }
             }
         },
         "Wealth Relic": {
@@ -645,7 +849,10 @@ resources_dict={
             "emoji_name": "wealth_relic_ca1",
             "emoji_id": 922871202773618768,
             "submaterials": {
-                "Applewood": "1"
+                "Applewood": {
+                    "quantity": 1,
+                    "emoji_str": "<:applewood_ca1:922856116017299466>"
+                }
             }
         },
         "Power Relic": {
@@ -654,7 +861,10 @@ resources_dict={
             "emoji_name": "power_relic_ca1",
             "emoji_id": 922871202907828254,
             "submaterials": {
-                "Willow Logs": "1"
+                "Willow Log": {
+                    "quantity": 1,
+                    "emoji_str": "<:willow_log_ca1:922856157587058688>"
+                }
             }
         },
         "Nature Relic": {
@@ -663,7 +873,10 @@ resources_dict={
             "emoji_name": "nature_relic_ca1",
             "emoji_id": 922871202979135531,
             "submaterials": {
-                "Oak Logs": "1"
+                "Oak Log": {
+                    "quantity": 1,
+                    "emoji_str": "<:oak_log_ca1:922856175345754163>"
+                }
             }
         },
         "Fire Relic": {
@@ -672,7 +885,10 @@ resources_dict={
             "emoji_name": "fire_relic_ca1",
             "emoji_id": 922857046913716286,
             "submaterials": {
-                "Chestnut Logs": "1"
+                "Chestnut Log": {
+                    "quantity": 1,
+                    "emoji_str": "<:chestnut_log_ca1:922856194002001960>"
+                }
             }
         },
         "Damage Relic": {
@@ -681,7 +897,10 @@ resources_dict={
             "emoji_name": "damage_relic_ca1",
             "emoji_id": 922857046762721281,
             "submaterials": {
-                "Maple Logs": "1"
+                "Maple Log": {
+                    "quantity": 1,
+                    "emoji_str": "<:maple_log_ca1:922856235978588161>"
+                }
             }
         },
         "Leeching Relic": {
@@ -690,7 +909,10 @@ resources_dict={
             "emoji_name": "leeching_relic_ca1",
             "emoji_id": 922871203079794698,
             "submaterials": {
-                "Olive Logs": "1"
+                "Olive Log": {
+                    "quantity": 1,
+                    "emoji_str": "<:olive_log_ca1:922856248985145374>"
+                }
             }
         },
         "Experience Relic": {
@@ -699,8 +921,14 @@ resources_dict={
             "emoji_name": "experience_relic_ca1",
             "emoji_id": 922871203130134528,
             "submaterials": {
-                "Maple Logs": "1",
-                "Olive Logs": "1"
+                "Maple Log": {
+                    "quantity": 1,
+                    "emoji_str": "<:maple_log_ca1:922856235978588161>"
+                },
+                "Olive Log": {
+                    "quantity": 1,
+                    "emoji_str": "<:olive_log_ca1:922856248985145374>"
+                }
             }
         },
         "Ice Relic": {
@@ -709,7 +937,10 @@ resources_dict={
             "emoji_name": "ice_relic_ca3",
             "emoji_id": 936964378517975040,
             "submaterials": {
-                "Magic Logs": "2"
+                "Magic Log": {
+                    "quantity": 2,
+                    "emoji_str": "<:magic_log_ca3:954795411913179197>"
+                }
             }
         },
         "Cursed Relic": {
@@ -718,7 +949,10 @@ resources_dict={
             "emoji_name": "cursed_relic_ca1",
             "emoji_id": 922857046934708235,
             "submaterials": {
-                "Palm Wood": "2"
+                "Palm Wood": {
+                    "quantity": 2,
+                    "emoji_str": "<:palm_wood_ca1:922856261052149761>"
+                }
             }
         },
         "Efficiency Relic": {
@@ -727,7 +961,10 @@ resources_dict={
             "emoji_name": "efficiency_relic_ch",
             "emoji_id": 1080889511569006724,
             "submaterials": {
-                "Pear Wood": "1"
+                "Pear Wood": {
+                    "quantity": 1,
+                    "emoji_str": "<:pearwood_ch:1080889458938880080>"
+                }
             }
         },
         "Affliction Relic": {
@@ -736,8 +973,14 @@ resources_dict={
             "emoji_name": "affliction_relic_ch",
             "emoji_id": 1080889491889340436,
             "submaterials": {
-                "Lime Wood": "1",
-                "Ancient Tablet": "1"
+                "Lime Wood": {
+                    "emoji_str": "<:lime_wood_ch:1080889434318323744>",
+                    "quantity": 1
+                },
+                "Ancient Tablet": {
+                    "emoji_str": "<:ancient_tablet_ca3:1080585649796681818>",
+                    "quantity": 1
+                }
             }
         }
     },
@@ -748,7 +991,10 @@ resources_dict={
             "emoji_name": "paper_ca3",
             "emoji_id": 936964378773831721,
             "submaterials": {
-                "Pine Logs": "1"
+                "Pine Log": {
+                    "quantity": 1,
+                    "emoji_str": "<:accuracy_relic_ca1:922857047014395904>"
+                }
             }
         },
         "Book": {
@@ -757,8 +1003,14 @@ resources_dict={
             "emoji_name": "book_ca3",
             "emoji_id": 936964379092594718,
             "submaterials": {
-                "Paper": "5",
-                "Leather": "1"
+                "Paper": {
+                    "quantity": 5,
+                    "emoji_str": "<:paper_ca3:936964378773831721>"
+                },
+                "Leather": {
+                    "quantity": 1,
+                    "emoji_str": "<:leather_ca2:1095373493668954173>"
+                }
             }
         },
         "Ember Tome": {
@@ -767,9 +1019,18 @@ resources_dict={
             "emoji_name": "ember_tome_ca3",
             "emoji_id": 936964378283114506,
             "submaterials": {
-                "Book": "1",
-                "Relic of Fire": "1",
-                "Magic Essence": "1"
+                "Book": {
+                    "quantity": 1,
+                    "emoji_str": "<:book_ca3:936964379092594718>"
+                },
+                "Fire Relic": {
+                    "quantity": 1,
+                    "emoji_str": "<:fire_relic_ca1:922857046913716286>"
+                },
+                "Magic Essence": {
+                    "quantity": 1,
+                    "emoji_str": "<:magic_essence_ca3:951240829312311296>"
+                }
             }
         },
         "Leech Tome": {
@@ -778,9 +1039,18 @@ resources_dict={
             "emoji_name": "leech_tome_ca3",
             "emoji_id": 936964378891264001,
             "submaterials": {
-                "Book": "1",
-                "Relic of Nature": "1",
-                "Magic Essence": "1"
+                "Book": {
+                    "quantity": 1,
+                    "emoji_str": "<:book_ca3:936964379092594718>"
+                },
+                "Nature Relic": {
+                    "quantity": 1,
+                    "emoji_str": "<:nature_relic_ca1:922871202979135531>"
+                },
+                "Magic Essence": {
+                    "quantity": 1,
+                    "emoji_str": "<:magic_essence_ca3:951240829312311296>"
+                }
             }
         },
         "Icicle Tome": {
@@ -789,9 +1059,18 @@ resources_dict={
             "emoji_name": "icicle_tome_ca3",
             "emoji_id": 936964378689957958,
             "submaterials": {
-                "Book": "1",
-                "Ice Relic": "1",
-                "Magic Essence": "1"
+                "Book": {
+                    "quantity": 1,
+                    "emoji_str": "<:book_ca3:936964379092594718>"
+                },
+                "Ice Relic": {
+                    "quantity": 1,
+                    "emoji_str": "<:ice_relic_ca3:936964378517975040>"
+                },
+                "Magic Essence": {
+                    "quantity": 1,
+                    "emoji_str": "<:magic_essence_ca3:951240829312311296>"
+                }
             }
         },
         "Haunt Tome": {
@@ -800,9 +1079,18 @@ resources_dict={
             "emoji_name": "haunt_tome_ca3",
             "emoji_id": 936964378002071573,
             "submaterials": {
-                "Book": "1",
-                "Cursed Relic": "1",
-                "Magic Essence": "1"
+                "Book": {
+                    "quantity": 1,
+                    "emoji_str": "<:book_ca3:936964379092594718>"
+                },
+                "Cursed Relic": {
+                    "quantity": 1,
+                    "emoji_str": "<:cursed_relic_ca1:922857046934708235>"
+                },
+                "Magic Essence": {
+                    "quantity": 1,
+                    "emoji_str": "<:magic_essence_ca3:951240829312311296>"
+                }
             }
         },
         "Ignite Tome": {
@@ -811,9 +1099,18 @@ resources_dict={
             "emoji_name": "ignite_tome_ca3",
             "emoji_id": 936964378748674090,
             "submaterials": {
-                "Book": "1",
-                "Relic of Fire": "1",
-                "Magic Essence": "5"
+                "Book": {
+                    "quantity": 1,
+                    "emoji_str": "<:book_ca3:936964379092594718>"
+                },
+                "Fire Relic": {
+                    "quantity": 1,
+                    "emoji_str": "<:fire_relic_ca1:922857046913716286>"
+                },
+                "Magic Essence": {
+                    "quantity": 5,
+                    "emoji_str": "<:magic_essence_ca3:951240829312311296>"
+                }
             }
         },
         "Drain Tome": {
@@ -822,9 +1119,18 @@ resources_dict={
             "emoji_name": "drain_tome_ca3",
             "emoji_id": 936964378077564988,
             "submaterials": {
-                "Book": "1",
-                "Relic of Nature": "1",
-                "Magic Essence": "3"
+                "Book": {
+                    "quantity": 1,
+                    "emoji_str": "<:book_ca3:936964379092594718>"
+                },
+                "Nature Relic": {
+                    "quantity": 1,
+                    "emoji_str": "<:nature_relic_ca1:922871202979135531>"
+                },
+                "Magic Essence": {
+                    "quantity": 3,
+                    "emoji_str": "<:magic_essence_ca3:951240829312311296>"
+                }
             }
         },
         "Freeze Tome": {
@@ -833,9 +1139,18 @@ resources_dict={
             "emoji_name": "freeze_tome_ca3",
             "emoji_id": 936964378337615912,
             "submaterials": {
-                "Book": "1",
-                "Ice Relic": "1",
-                "Magic Essence": "3"
+                "Book": {
+                    "quantity": 1,
+                    "emoji_str": "<:book_ca3:936964379092594718>"
+                },
+                "Ice Relic": {
+                    "quantity": 1,
+                    "emoji_str": "<:ice_relic_ca3:936964378517975040>"
+                },
+                "Magic Essence": {
+                    "quantity": 3,
+                    "emoji_str": "<:magic_essence_ca3:951240829312311296>"
+                }
             }
         },
         "Curse Tome": {
@@ -844,9 +1159,18 @@ resources_dict={
             "emoji_name": "curse_tome_ca3",
             "emoji_id": 936964377867874305,
             "submaterials": {
-                "Book": "1",
-                "Cursed Relic": "1",
-                "Magic Essence": "3"
+                "Book": {
+                    "quantity": 1,
+                    "emoji_str": "<:book_ca3:936964379092594718>"
+                },
+                "Cursed Relic": {
+                    "quantity": 1,
+                    "emoji_str": "<:cursed_relic_ca1:922857046934708235>"
+                },
+                "Magic Essence": {
+                    "quantity": 3,
+                    "emoji_str": "<:magic_essence_ca3:951240829312311296>"
+                }
             }
         },
         "Inferno Tome": {
@@ -855,9 +1179,18 @@ resources_dict={
             "emoji_name": "inferno_tome_ca3",
             "emoji_id": 936964378568318977,
             "submaterials": {
-                "Book": "1",
-                "Relic of Fire": "1",
-                "Magic Essence": "10"
+                "Book": {
+                    "quantity": 1,
+                    "emoji_str": "<:book_ca3:936964379092594718>"
+                },
+                "Fire Relic": {
+                    "quantity": 1,
+                    "emoji_str": "<:fire_relic_ca1:922857046913716286>"
+                },
+                "Magic Essence": {
+                    "quantity": 10,
+                    "emoji_str": "<:magic_essence_ca3:951240829312311296>"
+                }
             }
         },
         "Consume Tome": {
@@ -866,9 +1199,18 @@ resources_dict={
             "emoji_name": "consume_tome_ca3",
             "emoji_id": 936964377565876286,
             "submaterials": {
-                "Book": "1",
-                "Relic of Nature": "1",
-                "Magic Essence": "6"
+                "Book": {
+                    "quantity": 1,
+                    "emoji_str": "<:book_ca3:936964379092594718>"
+                },
+                "Nature Relic": {
+                    "quantity": 1,
+                    "emoji_str": "<:nature_relic_ca1:922871202979135531>"
+                },
+                "Magic Essence": {
+                    "quantity": 6,
+                    "emoji_str": "<:magic_essence_ca3:951240829312311296>"
+                }
             }
         },
         "Blizzard Tome": {
@@ -877,9 +1219,18 @@ resources_dict={
             "emoji_name": "blizzard_tome_ca3",
             "emoji_id": 936964377712676906,
             "submaterials": {
-                "Book": "1",
-                "Ice Relic": "1",
-                "Magic Essence": "6"
+                "Book": {
+                    "quantity": 1,
+                    "emoji_str": "<:book_ca3:936964379092594718>"
+                },
+                "Ice Relic": {
+                    "quantity": 1,
+                    "emoji_str": "<:ice_relic_ca3:936964378517975040>"
+                },
+                "Magic Essence": {
+                    "quantity": 6,
+                    "emoji_str": "<:magic_essence_ca3:951240829312311296>"
+                }
             }
         },
         "Torture Tome": {
@@ -888,10 +1239,66 @@ resources_dict={
             "emoji_name": "torture_tome_ca3",
             "emoji_id": 936964379147124786,
             "submaterials": {
-                "Book": "1",
-                "Cursed Relic": "1",
-                "Magic Essence": "6"
+                "Book": {
+                    "quantity": 1,
+                    "emoji_str": "<:book_ca3:936964379092594718>"
+                },
+                "Cursed Relic": {
+                    "quantity": 1,
+                    "emoji_str": "<:cursed_relic_ca1:922857046934708235>"
+                },
+                "Magic Essence": {
+                    "quantity": 6,
+                    "emoji_str": "<:magic_essence_ca3:951240829312311296>"
+                }
             }
         }
     }
 }
+
+baits_dict= {
+        'Earthworm': {
+            'emoji_name': 'earthworm_ca2',
+            'emoji_id': 922887338357567499
+        },
+        'Iceworm': {
+            'emoji_name': 'iceworm_ca2',
+            'emoji_id': 922887338655354962
+        },
+        'Corpseworm': {
+            'emoji_name': 'corpseworm',
+            'emoji_id': 922887338269499414
+        },
+        'Toxic Worm': {
+            'emoji_name': 'toxic_worm_ca2',
+            'emoji_id': 922887339037044756
+        },
+        'Sandworm': {
+            'emoji_name': 'sandworm_ca2',
+            'emoji_id': 922887338848296970
+        },
+        'Beetle': {
+            'emoji_name': 'beetle_ca2',
+            'emoji_id': 922887338412097656
+        },
+        'Grasshopper': {
+            'emoji_name': 'grasshopper_ca2',
+            'emoji_id': 922887338810548265
+        },
+        'Wasp': {
+            'emoji_name': 'wasp_ca2',
+            'emoji_id': 922887339070619708
+        },
+        'Scallop': {
+            'emoji_name': 'scallop_ca2',
+            'emoji_id': 922887338756030515
+        },
+        'Crab': {
+            'emoji_name': 'crab_ca2',
+            'emoji_id': 922887338567286784
+        },
+        'Bass': {
+            'emoji_name': 'bass_ca2',
+            'emoji_id': 922873492058284094
+        }
+    }

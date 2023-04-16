@@ -112,7 +112,21 @@ class Calculator(interactions.Extension):
         XPneeded = round(bigxp - minxp)
         return XPneeded
 
-    def make_rsc_menu(self,skill_name:str) -> SelectMenu:
+    def get_menus(self,skill_name:str,user_id:int,location:str="Bright Leaf") -> list[ActionRow]:
+        if skill_name == 'combat':
+            loc_menu = self.make_loc_menu(user_id=user_id)
+            mob_menu = self.make_mob_menu(location=location,user_id=user_id)
+            boost_menu = self.make_boost_menu(skill_name=skill_name,user_id=user_id)
+
+            return [ActionRow(components=[loc_menu]),ActionRow(components=[mob_menu]),ActionRow(components=[boost_menu])]
+
+        else:
+            rsc_menu = self.make_rsc_menu(skill_name=skill_name,user_id=user_id)
+            boost_menu = self.make_boost_menu(skill_name=skill_name,user_id=user_id)
+
+            return [ActionRow(components=[rsc_menu]),ActionRow(components=[boost_menu])]
+
+    def make_rsc_menu(self,skill_name:str,user_id:int) -> SelectMenu:
         temp_list:list[SelectOption] = []
         for resource in resources_dict[skill_name]:
             temp_list.append(it.SelectOption(
@@ -128,11 +142,11 @@ class Calculator(interactions.Extension):
         menu = it.SelectMenu(
                         options=temp_list,
                         placeholder="Select Resource !",
-                        custom_id=f"rsc_menu_{skill_name}"
+                        custom_id=f"rsc_menu_{skill_name}_id_{user_id}"
                             )
         return menu
 
-    def make_boost_menu(self,skill_name:str) -> SelectMenu:
+    def make_boost_menu(self,skill_name:str,user_id:int) -> SelectMenu:
         boost_dict = {"combat": 3,"mining": 2,"smithing": 3}
         
         temp_list:list[SelectOption] = []
@@ -149,9 +163,7 @@ class Calculator(interactions.Extension):
         menu = it.SelectMenu(
                             options=temp_list,
                             placeholder="Select Boost !",
-                            #min_values=1,
-                            #max_values=4,
-                            custom_id=f"boost_menu_{skill_name}"
+                            custom_id=f"boost_menu_{skill_name}_id_{user_id}"
                             )
         if skill_name in boost_dict:
             max_value = boost_dict[skill_name]
@@ -159,7 +171,7 @@ class Calculator(interactions.Extension):
             menu.min_values = 1
         return menu
 
-    def make_loc_menu(self) -> SelectMenu:
+    def make_loc_menu(self,user_id:int) -> SelectMenu:
         temp_list:list[SelectOption] = []
         for location in combat_dict :
             temp_list.append(it.SelectOption(
@@ -174,11 +186,11 @@ class Calculator(interactions.Extension):
         menu = it.SelectMenu(
                         options=temp_list,
                         placeholder="Select Location !",
-                        custom_id="loc_menu_combat"
+                        custom_id=f"loc_menu_combat_id_{user_id}"
                             )
         return menu
 
-    def make_mob_menu(self,location:str) -> SelectMenu:
+    def make_mob_menu(self,location:str,user_id:int) -> SelectMenu:
         temp_list:list[SelectOption] = []
         for mob in combat_dict[location]["mobs"]:
             temp_list.append(it.SelectOption(
@@ -194,7 +206,7 @@ class Calculator(interactions.Extension):
         menu = it.SelectMenu(
                         options=temp_list,
                         placeholder="Select Mob !",
-                        custom_id="mob_menu"
+                        custom_id=f"mob_menu_id_{user_id}"
                             )
         return menu
 
@@ -215,23 +227,11 @@ class Calculator(interactions.Extension):
                 values.append(option.value)
         return values
 
-    def get_menus(self,skill_name:str,location:str="Bright Leaf") -> list[ActionRow]:
-        if skill_name == 'combat':
-            loc_menu = self.make_loc_menu()
-            mob_menu = self.make_mob_menu(location=location)
-            boost_menu = self.make_boost_menu(skill_name=skill_name)
-
-            return [ActionRow(components=[loc_menu]),ActionRow(components=[mob_menu]),ActionRow(components=[boost_menu])]
-
-        else:
-            rsc_menu = self.make_rsc_menu(skill_name=skill_name)
-            boost_menu = self.make_boost_menu(skill_name=skill_name)
-
-            return [ActionRow(components=[rsc_menu]),ActionRow(components=[boost_menu])]
-
     def do_embed(self,skill_name:str="",rsc:str="",boost:str="",quantity:str="",lvls:list=[]) -> Embed:
         element_type = "Mob" if skill_name == "combat" else "Resource"
         embed_body = f"{element_type} ::\n{rsc}\nBoost ::\n{boost}\nQuantity ::\n{quantity}"
+        if skill_name not in ["combat","mining","woodcutting"]:
+            embed_body = embed_body + "\nMaterials ::\n "
         embed = Embed(
                         title=f"Skill : {skill_name.capitalize()}",
                         description = embed_body
@@ -264,11 +264,13 @@ class Calculator(interactions.Extension):
             boost_value = boost_value * boosts[boost]['value']
         return boost_value
 
-    def get_boosts_text(self,boosts_list:list[str]) -> str:
+    def get_boosts_text(self,boosts_list:list[str],quantity:int) -> str:
         _boosts_str = ""
         for boost in boosts_list:
-            _emoji = Emoji(name=boosts[boost]["emoji_name"],id=boosts[boost]["emoji_id"])
-            _boosts_str = _boosts_str + f"[{_emoji.format}{boost}]"
+            _charges = ""
+            if boost in ["Inf Hammer","Inf Ring","Pros Neck"]:
+                _charges = f' : {math.ceil(quantity/boosts[boost]["charges"]):,}'
+            _boosts_str += f'[<:{boosts[boost]["emoji_name"]}:{boosts[boost]["emoji_id"]}>{boost}]{_charges}\n'
         return _boosts_str
 
 
@@ -278,7 +280,7 @@ class Calculator(interactions.Extension):
 
     @interactions.extension_command(
         name="calc",
-        description="do math",
+        description="Calculate the resourses needed to get from your current level to a target level",
         options=[
             it.Option(
                     name="current_lvl",
@@ -327,29 +329,30 @@ class Calculator(interactions.Extension):
         #####################################
         await ctx.defer()
         
-        async def check(comp_ctx):
-            if int(comp_ctx.author.user.id) == int(ctx.author.user.id):
-                return True
-            await ctx.send("I wasn't asking you!", ephemeral=True)
-            return False
+        async def check(comp_ctx: CPC):
+            if int(comp_ctx.author.user.id) != int(ctx.author.user.id):
+                await comp_ctx.send("I wasn't asking you!", ephemeral=True)
+                return False
+            return True
+
 
 
 
         xp_needed = self.get_xp(curr_lvl=current_lvl,tar_lvl=target_lvl,curr_per=current_perc,tar_per=target_perc)
         menu = self.skill_menu
         time = datetime.today()
-        menu.custom_id = f"skill_menu_{time}"
+        menu.custom_id = f"skill_menu_{time}_id_{ctx.user.id}"
         await ctx.send("select skill", components=[menu])
         try:
-            skill_ctx = await self.bot.wait_for_component( components=menu, check=check, timeout=60)
+            skill_ctx = await self.bot.wait_for_component( components=menu, check=check, timeout=30)
             skill_name=skill_ctx.data.values[0]
 
-            menus:list[ActionRow] = self.get_menus(skill_name=skill_name)
+            menus:list[ActionRow] = self.get_menus(skill_name=skill_name,user_id=ctx.user.id)
 
             calc_butt = self.calc_butt
             finish_butt = self.finish_butt
-            calc_butt.custom_id = "calc"
-            finish_butt.custom_id = "finish"
+            calc_butt.custom_id = f"calc_id_{ctx.user.id}"
+            finish_butt.custom_id = f"finish_id_{ctx.user.id}"
             menus.append(ActionRow(components=[calc_butt,finish_butt]))
             await skill_ctx.edit(
                                 "Calculating ...",
@@ -358,11 +361,12 @@ class Calculator(interactions.Extension):
                         )
         except asyncio.TimeoutError: 
                 await ctx.edit("timed out !",components=[])
-        await asyncio.sleep(60)
-        await ctx.edit("Timed out!",components=[])
 
     @interactions.extension_listener()
     async def on_component(self,ctx:CPC,*args):
+        if int(ctx.author.user.id) != int(ctx.custom_id.split("_id_")[1]):
+                return await ctx.send("I wasn't asking you!", ephemeral=True)
+                
         if ctx.custom_id.startswith("rsc_menu"):
             selected_rsc = ctx.data.values[0]
             skill_name = ctx.custom_id.split("_")[2]
@@ -421,14 +425,24 @@ class Calculator(interactions.Extension):
                 rsc_emoji_id = resources_dict[skill_name][selected_rsc]['emoji_id']
 
             _selected_boosts = self.get_multi_default(ctx.message.components[boost_idx].components[0].options)
-            _boosts_text = self.get_boosts_text(_selected_boosts)
             rsc_emoji = Emoji(name=rsc_emoji_name,id=rsc_emoji_id)
                 
             xp_needed = int(ctx.message.embeds[0].footer.text.split(" ")[5].replace(",",""))
             boost_value = self.get_total_boost_value(_selected_boosts)
             quantity_needed = math.ceil(xp_needed / (rsc_xp*boost_value))
+
+            _boosts_text = self.get_boosts_text(boosts_list=_selected_boosts,quantity=quantity_needed)
+
             embed = ctx.message.embeds[0]
-            embed.description = f"{element_type} ::\n[{rsc_emoji.format}][{selected_rsc}]\nBoost ::\n{_boosts_text}\nQuantity ::```{quantity_needed:,}```"
+            embed.description = f"{element_type} ::\n[{rsc_emoji.format}][{selected_rsc}]\nBoost ::\n{_boosts_text}Quantity ::```{quantity_needed:,}```"
+            if skill_name not in ["combat","mining","woodcutting"]:
+                mats = resources_dict[skill_name][selected_rsc]["submaterials"]
+                mats_txts = []
+                for mat in mats:
+                    _mat_quantity = quantity_needed * mats[mat]["quantity"]
+                    mats_txts.append(f'[{mats[mat]["emoji_str"]}]{mat} : {_mat_quantity:,}')
+                mats_txt = "\n" + "\n".join(mats_txts)
+                embed.description += f'Materials ::{mats_txt}'
             compos = ctx.message.components
             await ctx.edit("Calculating ...",embeds=[embed],components=compos)
             self.update_analytics(skill_type="calc",skill_name=skill_name)

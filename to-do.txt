@@ -15,10 +15,16 @@
 [x]-add analytics for guides
 [x]-make the rest of the commands channel-specified
 [x]-fix added lvls' xps
-[n]-add magic sets to resources (y/n) ?
+[d]-add magic sets to resources ?
 [x]-split guides to multiple columns
 [d]-move guides dynamics to wait_for
 [x]-add guides to help cmd
-[o]-added needed resources to skills's calc
-[o]-add rings/hammers uses
-[o]-specify spades usage in embed footer
+[x]-specify spades usage in embed footer (guide)
+[x]-update submaterials to contain emojis
+[x]-added needed resources to skills's calc (calc)
+[x]-add rings/hammers uses (calc)
+[x]-clean calc embed
+[x]-add support server
+[x]-check user's uniquity (manual rework)
+[o]-fix calc's uniquity
+[o]-covert help's options to dynamic generation

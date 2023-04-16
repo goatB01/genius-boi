@@ -26,7 +26,7 @@ class visualizator():
         pass
         
     def get_data(self) -> dict:
-        _data = MongoClient(CALC_DB_URL)["Miscs"]["UsageData"].find_one({"_id":"data"})
+        _data = MongoClient(DB_URL1)["Miscs"]["UsageData"].find_one({"_id":"data"})
         self.data = _data
     
     def format_perc(self,pct, allvalues):

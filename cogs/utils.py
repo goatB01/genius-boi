@@ -1,3 +1,4 @@
+import time
 import interactions
 import interactions as it
 from interactions import Client
@@ -231,6 +232,32 @@ class Utility(interactions.Extension):
         _embed.set_image(url=f"attachment://{_filename}")
         await ctx.send(embeds=[_embed],files=_file)
 
+    @interactions.extension_command(
+            name="support_server",
+            description="get invite link to the support's server"
+            )
+    async def support_server(self,ctx:CC):
+        ######################################
+        channel_state = self.check_channel(guild_id=str(ctx.guild_id),channel_id=int(ctx.channel_id))
+
+        if channel_state[0] == False:
+            channel_ids = channel_state[1]
+            channel_tags = [f"<#{channel_ids[_id]}>" for _id in range(len(channel_ids))]
+            tags = " or ".join(channel_tags)
+            await ctx.send(content=f"you can't use me here, go to {tags} please",ephemeral=True)
+            return
+        #####################################
+        _link = "https://discord.gg/uk3d6jNwXX"
+        _button = it.Button(
+            style=it.ButtonStyle.LINK,
+            label="Let Me In !",
+            url=_link,
+            disabled=False
+        )
+        _embed = it.Embed(title="Click the button to get in my server", color=0x00ff00)
+        await ctx.send(embeds=[_embed],components=[_button])
+        time.sleep(20)
+        await ctx.edit("Invite Link Timed'Out",embeds=[],components=[])
 
 
 def setup(client:Client,default_channels):

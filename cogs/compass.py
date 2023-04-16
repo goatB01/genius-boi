@@ -91,7 +91,7 @@ class Guide(interactions.Extension):
     
         return lst[:first], lst[first:second], lst[second:]
 
-    def format_field(self,guide_dict:dict,column_idx:str,boost_value:float):
+    def format_fields(self,guide_dict:dict,column_idx:str,boost_value:float):
 
         quantity = math.ceil(guide_dict[column_idx]['quantity'] / boost_value)
         rsc1 = f"[<:{guide_dict[column_idx]['emoji_name'][0]}:{guide_dict[column_idx]['emoji_id'][0]}>]{guide_dict[column_idx]['resource'][0]}" if len(guide_dict[column_idx]['resource']) == 1 else f"[<:{guide_dict[column_idx]['emoji_name'][0]}:{guide_dict[column_idx]['emoji_id'][0]}>]{guide_dict[column_idx]['resource'][0]}/\n/[<:{guide_dict[column_idx]['emoji_name'][1]}:{guide_dict[column_idx]['emoji_id'][1]}>]{guide_dict[column_idx]['resource'][1]}"
@@ -106,24 +106,24 @@ class Guide(interactions.Extension):
         column1, column2, column3 = self.split_list(keys)
         fields = []
         for idx in range(len(column3)):
-            _field1 = self.format_field(guide_dict=guide_dict,column_idx=column1[idx],boost_value=boost_value)
+            _field1 = self.format_fields(guide_dict=guide_dict,column_idx=column1[idx],boost_value=boost_value)
             fields.append(_field1)
 
-            _field2 = self.format_field(guide_dict=guide_dict,column_idx=column2[idx],boost_value=boost_value)
+            _field2 = self.format_fields(guide_dict=guide_dict,column_idx=column2[idx],boost_value=boost_value)
             fields.append(_field2)
 
-            _field3 = self.format_field(guide_dict=guide_dict,column_idx=column3[idx],boost_value=boost_value)
+            _field3 = self.format_fields(guide_dict=guide_dict,column_idx=column3[idx],boost_value=boost_value)
             fields.append(_field3)
 
         if len(column1)-len(column2) == 1:
-            _field1 = self.format_field(guide_dict=guide_dict,column_idx=column1[-1],boost_value=boost_value)
+            _field1 = self.format_fields(guide_dict=guide_dict,column_idx=column1[-1],boost_value=boost_value)
             fields.append(_field1)
 
         if len(column2) - len(column3) == 1:
-            _field1 = self.format_field(guide_dict=guide_dict,column_idx=column1[-1],boost_value=boost_value)
+            _field1 = self.format_fields(guide_dict=guide_dict,column_idx=column1[-1],boost_value=boost_value)
             fields.append(_field1)
 
-            _field2 = self.format_field(guide_dict=guide_dict,column_idx=column2[-1],boost_value=boost_value)
+            _field2 = self.format_fields(guide_dict=guide_dict,column_idx=column2[-1],boost_value=boost_value)
             fields.append(_field2)
 
             fields.append(it.EmbedField(name="** **",value="** **",inline=True))
@@ -179,7 +179,7 @@ class Guide(interactions.Extension):
     def get_boosts_text(self,boosts_list:list[str]) -> str:
         _boosts_str = "Boosts Selected :\n"
         for boost in boosts_list:
-            _boosts_str = _boosts_str + f"[{boosts[boost]['str_form']}] {boost}\n"
+            _boosts_str += f"[{boosts[boost]['str_form']}] {boost}\n"
         return _boosts_str
 
     def update_analytics(self,skill_type:str,skill_name:str) -> None:
@@ -241,9 +241,11 @@ class Guide(interactions.Extension):
         guide_embed.title = f"{skill}'s guide".title()
         guide_embed.description = f"Boosts Selected :\n[{boosts['NoBoost']['str_form']}] NoBoost"
         guide_embed.fields = self.create_guide_fields(guide_dict=_guide_dict,boost_value=1.0)
+        if skill == "smithing":
+            guide_embed.set_footer(text="Calculations assume forging bars into spade when available.")
         guide_menu = self.make_boost_menu(skill)
         time = datetime.today()
-        guide_menu.custom_id = f"guide_boost_menu_{skill}_{time}"
+        guide_menu.custom_id = f"guide_boost_menu_{skill}_{time}_id_{ctx.user.id}"
 
         await ctx.send("Guiding ...",embeds=[guide_embed],components=[guide_menu])
         
@@ -251,6 +253,9 @@ class Guide(interactions.Extension):
         
     @interactions.extension_listener()
     async def on_component(self,ctx:CPC,*args):
+        if int(ctx.author.user.id) != int(ctx.custom_id.split("_id_")[1]):
+            return await ctx.send("I wasn't asking you !", ephemeral=True)
+           
         if ctx.custom_id.startswith("guide_boost_menu_"):
             _embed = ctx.message.embeds[0]
 
